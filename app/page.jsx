@@ -1,8 +1,4 @@
 import Link from 'next/link';
-import { Card } from 'components/card';
-import { ContextAlert } from 'components/context-alert';
-import { Markdown } from 'components/markdown';
-import { RandomQuote } from 'components/random-quote';
 import { getNetlifyContext } from 'utils';
 
 const contextExplainer = `
@@ -18,18 +14,30 @@ const ctx = getNetlifyContext();
 
 export default function Page() {
   return (
-    <main>
-      <section className="hero">
-        <div className="hero-content">
-          <h1>Hello, I'm Minh Lo</h1>
-          <p>
-            I write about discipline, gym and self-development.
-          </p>
+    <main className="min-h-screen flex items-center justify-center bg-gray-50">
+      <section className="text-center space-y-6">
+        <h1 className="text-4xl font-bold">
+          Hello, I'm Lo Cong Minh (Alexis)
+        </h1>
 
-          <div className="hero-buttons">
-            <a href="/blog" className="btn">Read Blog</a>
-            <a href="/about" className="btn-outline">About Me</a>
-          </div>
+        <p className="text-gray-600 text-lg">
+          I write about discipline, gym and self-development.
+        </p>
+
+        <div className="flex gap-4 justify-center">
+          <a
+            href="/blog"
+            className="px-6 py-2 bg-black text-white rounded-lg"
+          >
+            Read Blog
+          </a>
+
+          <a
+            href="/about"
+            className="px-6 py-2 border border-black rounded-lg"
+          >
+            About Me
+          </a>
         </div>
       </section>
     </main>
